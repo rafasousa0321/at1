@@ -14,7 +14,7 @@ class PortalController extends Controller
     public function listarEquipas () {
         $equipas = [
             'FCPorto',
-            'Barcelona',
+            'FCBarcelona',
             'ManCity',
             'ManUnited',
             'BorussiaDortmund'
