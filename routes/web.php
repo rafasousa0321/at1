@@ -48,3 +48,18 @@ Route::get('/nomes/{nome}/{vezes}',function($nome, $vezes) {
 Route::get('welcome', function(){
     return view('bemvindo');
 });
+
+Route::get('/nomes2/{name}/{surname}', function ($name=null, $surname=null){
+    return view ('mostranome', ['name'=>$name, 'surname'=>$surname]);
+});
+
+Route::get('/tarefas', function(){
+    $tarefas = [
+        'Comprar senha',
+        'Imprimir fotocópias',
+        'Carregar cartão'
+    ];
+    return view ('tarefas',[
+        'tarefas'=>$tarefas
+    ]);
+});
