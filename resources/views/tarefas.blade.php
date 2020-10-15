@@ -3,4 +3,4 @@
 @foreach($tarefas as $tarefa)
     <li>{{$tarefa}}</li>
 @endforeach
-</ul>
+</ul> 
