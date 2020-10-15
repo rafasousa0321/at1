@@ -44,3 +44,7 @@ Route::get('/nomes/{nome}/{vezes}',function($nome, $vezes) {
         echo('<br>');
     }
 });
+
+Route::get('welcome', function(){
+    return view('bemvindo');
+});
