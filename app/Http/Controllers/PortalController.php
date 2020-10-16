@@ -21,4 +21,22 @@ class PortalController extends Controller
         ];
         return view ('equipas', ['equipas' => $equipas]);
     }
+
+    public function listarEquipa(Request $request){
+        $teams = [
+            'FCPorto',
+            'FCBarcelona',
+            'ManCity',
+            'ManUnited',
+            'BorussiaDortmund'
+        ];
+        $contar=count($teams);
+        if($request -> chave >=0 && $request -> chave <$contar){
+            $equipa = $teams[$request->chave];
+        }
+        else{
+            $equipa = 'Erro';
+        }
+        return view('equipas',['equipa'=>$equipa]);
+    }
 }
