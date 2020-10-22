@@ -70,3 +70,7 @@ Route::get('/entrada', 'App\Http\Controllers\PortalController@index')->name('ent
 Route::get('/equipas', 'App\Http\Controllers\PortalController@listarEquipas')->name('equipas.listarEquipas');
 
 Route::get('/listar-equipas/{chave}', 'App\Http\Controllers\PortalController@listarEquipa');
+
+Route::get('/contacto', 'App\Http\Controllers\PortalController@mostrarForm')->name('contacto.index');
+
+Route::post('/processar', 'App\Http\Controllers\PortalController@processarForm')->name('processar.form');

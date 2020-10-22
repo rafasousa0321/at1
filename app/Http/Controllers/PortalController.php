@@ -39,4 +39,19 @@ class PortalController extends Controller
         }
         return view('equipas',['equipa'=>$equipa]);
     }
+
+    public function mostrarForm(){
+        return view('contacto');
+    }
+
+    public function processarForm(Request $request){
+        $nome = $request->nome;
+        $morada = $request->morada;
+        $automovel = $request->automovel;
+        return view('enviado', [
+            'nome'=>$nome,
+            'morada'=>$morada,
+            'automovel'=>$automovel
+        ]);
+    }
 }
